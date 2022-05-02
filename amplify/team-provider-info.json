@@ -10,6 +10,11 @@
       "StackName": "amplify-translationsreact-dev-134712",
       "StackId": "arn:aws:cloudformation:eu-west-1:226120165857:stack/amplify-translationsreact-dev-134712/9c324ad0-ca0d-11ec-81fd-06ce1aa0b3ad",
       "AmplifyAppId": "d58z2tky1eaqp"
+    },
+    "categories": {
+      "auth": {
+        "translationsreact56b74880": {}
+      }
     }
   }
 }
