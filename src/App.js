@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Amplify } from "aws-amplify";
+import Predictions, {
+  AmazonAIPredictionsProvider,
+} from "@aws-amplify/predictions";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
+Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
 function App() {
+  useEffect(() => {
+    const translate = async () => {
+      const identify = await Predictions.identify({
+        text: "Hello, world!",
+        languageCode: "en",
+      });
+      console.log(identify);
+    };
+
+    translate();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>Some text</div>
     </div>
   );
 }
