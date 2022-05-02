@@ -11,6 +11,6 @@
     "adminGuestProtected": "DISALLOW",
     "identifyType": "identifyText",
     "identifyDoc": false,
-    "access": "auth",
+    "access": "authAndGuest",
     "format": "PLAIN"
 }
